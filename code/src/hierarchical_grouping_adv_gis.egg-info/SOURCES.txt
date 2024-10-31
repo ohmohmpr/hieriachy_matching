@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/hierarchical_grouping/__init__.py
+src/hierarchical_grouping/file_reader.py
+src/hierarchical_grouping_adv_gis.egg-info/PKG-INFO
+src/hierarchical_grouping_adv_gis.egg-info/SOURCES.txt
+src/hierarchical_grouping_adv_gis.egg-info/dependency_links.txt
+src/hierarchical_grouping_adv_gis.egg-info/top_level.txt
