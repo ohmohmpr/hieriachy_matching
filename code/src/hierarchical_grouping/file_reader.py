@@ -2,12 +2,17 @@ import struct
 from shapely.geometry import Polygon
 from pathlib import Path
 
-
 class BinaryPolygonFileReader:
     def __init__(self, file_path):
         # Initialize with the file path and open the binary file
         self.ifs = open(file_path, 'rb')
 
+    def __getitem__(self, idx):
+        self.ifs.seek(0) 
+        for _ in range(idx+1):
+          set_id, first_polygon_set, second_polygon_set = self.read_next_set()
+        return set_id, first_polygon_set, second_polygon_set
+    
     def close(self):
         # Close the file when done
         self.ifs.close()
@@ -84,6 +89,37 @@ class BinaryPolygonFileReader:
             second_polygon_set.append(self.read_polygon_from_binary_file())
 
         return set_id, first_polygon_set, second_polygon_set  # Successfully read a set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def test_load_module():
     print("NEWww")
